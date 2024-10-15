@@ -1,10 +1,15 @@
 멀티캠퍼스 최종 프로젝트
-1. 삼성전자의 텍스트를 감정분석
- 가. 사용된 모델 : KoBERT,KoFinBERT,GPT
- 나. 사용된 텍스트 :
-  1) 한경 Analyst Rpeort 제목 + 세부 내역 : https://consensus.hankyung.com/
-  2) 빅카인즈 텍스트 + 키워드 : 
-3. 삼성전자 수익률과 비교
- 가. 사용모듈 : FinaceDataReader
- 나. 데이터 출철 : naver
-5. 
+내용 : 삼성전자의 텍스트를 감정분석 결과(점수,레이블)와 수익률과의 비교하고 점수,레이블을 가중하여 실제 투자 
+1. 사용된 모델 : KoBERT,KoFinBERT,GPT
+2. 사용된 텍스트 :
+ 한경 Analyst Rpeort 제목 + 세부 내역 : https://consensus.hankyung.com/
+ 빅카인즈 텍스트 + 키워드 : https://www.bigkinds.or.kr/
+ 점수는 ~1~1로, 레이블은 긍정(0초과 1까지),중립(0), 부정(0미만 -1까지)
+3. 삼성전자 수익률
+ 사용모듈 : FinaceDataReader
+ 데이터 출처 : naver
+4. 실제 투자 집행시에는 아래 감안
+ 매매수수료 : 0.013%(매수/매도시 발생)
+ 거래세 : 0.18%(매도시 발생)
+ 이자소득세 : 15.4%(이자 발생시 차감)
+
